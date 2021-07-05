@@ -1,0 +1,29 @@
+<section class="section-pokemons">
+  <h2 class="text-center">Les premiers Pokémon</h2>
+  <p class="text-center">Dans l'ordre du Pokédex :</p>
+  <div class="flex list-pokemons">
+    <article *ngFor="let pokemon of pokemons" class="flex">
+      <ul>
+        <li>
+          <img
+            class="img-pokemon"
+            src="https://pokeres.bastionbot.org/images/pokemon//{{
+              pokemon.id
+            }}.png"
+          />
+        </li>
+        <li>
+          {{ pokemon.name }}
+        </li>
+        <li>
+          {{ pokemon.category }}
+        </li>
+        <li>
+          {{ pokemon.types }}
+        </li>
+        <li>{{ pokemon.size | number: "1.0-2" }}m</li>
+        <li>{{ pokemon.weight }}kg</li>
+      </ul>
+    </article>
+  </div>
+</section>
